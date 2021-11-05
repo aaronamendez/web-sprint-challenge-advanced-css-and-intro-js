@@ -221,14 +221,15 @@ console.log(artists[8].name);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
-1. Receive an array
-2. Receive a number, which is the desired index in the array.
+1. Receive an array (done)
+2. Receive a number, which is the desired index in the array. (done)
 3. Return a string in the format `the artist at index {id} is {name}`
 
 Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array, number) {
-	/*Your Code Here*/
+	const obj = array[number];
+	return `the artist at index ${obj.id} is ${obj.name}`;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
