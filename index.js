@@ -208,16 +208,16 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-console.log(artists[0].name);
+// console.log(artists[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array
-console.log(artists[2].bio);
+// console.log(artists[2].bio);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 artists[8].name = "Vincent Van Gogh";
-console.log(artists[8].name);
+// console.log(artists[8].name);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -241,9 +241,28 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(/*Your Code Here*/) {
-	/*Your Code Here*/
+// Data we're working with
+// years: "1577 - 1640",
+
+function get20s(array) {
+	const newArray = [];
+	for (let i = 0; i < array.length; i++) {
+		// let string = array[i].years.split(" ");
+		// let conditiion1 = string[0];
+		// let conditiion2 = string[2];
+		if (
+			array[i].years.split(" ")[0] >= 1900 &&
+			array[i].years.split(" ")[2] <= 2000
+		) {
+			newArray.push(array[i].name);
+		}
+	}
+	return newArray;
 }
+// console.log(artists[0].years.split(" ")[0]);
+// console.log(artists[0].years.split(" ")[2]);
+// console.log(artists[0].years);
+console.log(get20s(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
